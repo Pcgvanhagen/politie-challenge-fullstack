@@ -4,9 +4,7 @@ public class VintageUpdater extends ItemUpdater {
 
 	@Override
 	public void updateQuality(Item item) {
-		if(item.quality < ItemUpdater.MAX_QUALITY) {
-			item.quality++;
-		}
+		item.quality = Math.min(item.quality + 1, ItemUpdater.MAX_QUALITY);
 	}
 
 }
