@@ -7,14 +7,11 @@ public class BackstagePassUpdater extends ItemUpdater {
 		if(item.sellIn <= 0) {
 			item.quality = 0;
 		} else if (item.sellIn <= 5) {
-			if(item.quality < ItemUpdater.MAX_QUALITY)
-			item.quality += 3;
+			item.quality = Math.min(item.quality + 3, ItemUpdater.MAX_QUALITY);
 		} else if (item.sellIn <= 10) {
-			if(item.quality < ItemUpdater.MAX_QUALITY)
-			item.quality += 2;
+			item.quality = Math.min(item.quality + 2, ItemUpdater.MAX_QUALITY);
 		} else {
-			if(item.quality < ItemUpdater.MAX_QUALITY)
-			item.quality ++;
+			item.quality = Math.min(item.quality + 1, ItemUpdater.MAX_QUALITY);
 		}
 	}
 
