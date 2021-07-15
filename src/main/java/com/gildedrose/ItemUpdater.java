@@ -2,6 +2,8 @@ package com.gildedrose;
 
 public class ItemUpdater {
 	
+	public static int MAX_QUALITY = 50;
+
 	public void update(Item item) {
 		this.updateSellin(item);
 		this.updateQuality(item);
